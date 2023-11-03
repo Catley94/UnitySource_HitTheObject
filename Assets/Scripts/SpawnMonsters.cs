@@ -42,6 +42,14 @@ public class SpawnMonsters : MonoBehaviour
             monsterSprite.GetComponent<D2dDestructibleSprite>().Shape = monsters[i];
             monsterSprite.GetComponent<D2dDestructibleSprite>().Rebuild();
             monsterSprite.name = monsters[i].name;
+            
+            monsterSprite.GetComponent<D2dSnapshot>().Clear();
+            
+            D2dSnapshotData data = new D2dSnapshotData();
+            data.Save(monsterSprite.GetComponent<D2dDestructibleSprite>());
+            monsterSprite.GetComponent<D2dSnapshot>().Data = data;
+            
+            monsterSprite.GetComponent<D2dDestructibleSprite>().HealSnapshot = monsterSprite.GetComponent<D2dSnapshot>();
 
             monsterSprites.Add(monsterSprite);
         }
