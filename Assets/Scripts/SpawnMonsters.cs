@@ -74,7 +74,11 @@ public class SpawnMonsters : MonoBehaviour
             destructableRequirements.AlphaRatioMax = 0.4f;
             destructableRequirements.OnRequirementsMet.AddListener(() =>
             {
-                if (nextMonster) nextMonster.GetComponent<D2dDestructibleSprite>().Indestructible = false;
+                if (nextMonster)
+                {
+                    nextMonster.GetComponent<D2dDestructibleSprite>().Indestructible = false;
+                    FindObjectOfType<CurrencyManager>().MoneyReward(1); //TODO 1 * Round
+                }
             });
 
             D2dRequirements inDestructableRequirements = currentMonster.AddComponent<D2dRequirements>();
