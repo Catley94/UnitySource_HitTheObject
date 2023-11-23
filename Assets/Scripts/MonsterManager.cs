@@ -129,7 +129,7 @@ public class MonsterManager : MonoBehaviour
 
     private void SetupDestructibleRequirements(GameObject currentMonster, GameObject nextMonster)
     {
-        Debug.Log($"{currentMonster.name} is looking at {nextMonster.name}");
+        // Debug.Log($"{currentMonster.name} is looking at {nextMonster.name}");
         D2dRequirements destructibleRequirements = currentMonster.AddComponent<D2dRequirements>();
         destructibleRequirements.AlphaRatio = true;
         destructibleRequirements.AlphaRatioMin = 0f;
@@ -150,7 +150,7 @@ public class MonsterManager : MonoBehaviour
                     round++;
                     for (int i = 0; i < 2; i++)
                     {
-                        Debug.Log($"Destroying {monsterGameObjects[0].name}");
+                        // Debug.Log($"Destroying {monsterGameObjects[0].name}");
                         Destroy(monsterGameObjects[0]);
                         monsterGameObjects.RemoveAt(0);
                     }
