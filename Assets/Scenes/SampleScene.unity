@@ -152,12 +152,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0b63e6aee4ef9789770a58956e6bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsters:
+  monsterSpritePool:
   - {fileID: 21300000, guid: 21c0480cd87a5436aa78812253f3639c, type: 3}
   - {fileID: 21300000, guid: 75c3f93916f574d87955f6adc0241d08, type: 3}
   - {fileID: 21300000, guid: 5dcae583edc274fffbb1ba44289c74de, type: 3}
+  - {fileID: 21300000, guid: 1d684cfa3e8484744b37acad5561edb4, type: 3}
+  - {fileID: 21300000, guid: 490fc5021ade345a9a2fa82d9ddd668e, type: 3}
+  - {fileID: 21300000, guid: 77af8719b2c82495fa16fe4b122bbeaa, type: 3}
+  - {fileID: 21300000, guid: 90bb2e4468a674acba1cbac4ee215a82, type: 3}
+  - {fileID: 21300000, guid: 47201bf0ccae740efa4edf2617b1bc43, type: 3}
+  - {fileID: 21300000, guid: 15d53ce9fe96d4c30a37462dc5450368, type: 3}
+  - {fileID: 21300000, guid: 5d69c745df721435f839facc3fc46e54, type: 3}
+  - {fileID: 21300000, guid: f2c475f93997d4c0f92c4250bb1273e4, type: 3}
+  - {fileID: 21300000, guid: 358b80e8e30f14e4c8f0679a413501f3, type: 3}
+  - {fileID: 21300000, guid: 39b012b44a1a3475395d8141b1bf0981, type: 3}
+  - {fileID: 21300000, guid: 67e674aae27464d04b5d3fbf1d45d2b2, type: 3}
+  - {fileID: 21300000, guid: 1acb0e42c44f64838bf266f471d191a6, type: 3}
+  - {fileID: 21300000, guid: c12c1e5d15cc04027be9a9e7cb637f2d, type: 3}
+  - {fileID: 21300000, guid: 3595cf8ae957f4ac89794b7e03286ed1, type: 3}
+  - {fileID: 21300000, guid: eb3cd011fd10b4db9a2c6fe1ceea1860, type: 3}
+  - {fileID: 21300000, guid: c98014fa6369c4fdfbb5727ffaef9b35, type: 3}
+  - {fileID: 21300000, guid: 3945c79dc22284934a40135e66b67458, type: 3}
   monsterSpritePrefab: {fileID: 4925697671063750959, guid: 02b544a6def7db58f84d7f3b7d8f158b, type: 3}
-  monsterSprites: []
+  monsterGameObjects: []
+  defeatedMonsters: 0
+  round: 1
 --- !u!4 &269254765
 Transform:
   m_ObjectHideFlags: 0
@@ -699,9 +718,9 @@ RectTransform:
   m_Father: {fileID: 1809423454}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -100}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 25, y: -150}
+  m_SizeDelta: {x: -50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1170261724
 MonoBehaviour:
@@ -750,8 +769,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
