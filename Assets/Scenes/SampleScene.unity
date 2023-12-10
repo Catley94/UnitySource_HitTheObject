@@ -181,6 +181,8 @@ MonoBehaviour:
   baseCoinsPerMonster: 1
   score: 0
   scoreText: {fileID: 768968307}
+  numOfMonstersPerRound: 3
+  numOfMonstersPerRoundToRemove: 3
 --- !u!4 &269254765
 Transform:
   m_ObjectHideFlags: 0

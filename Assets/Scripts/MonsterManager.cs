@@ -18,6 +18,10 @@ public class MonsterManager : MonoBehaviour
     [SerializeField] private int baseCoinsPerMonster = 1;
     [SerializeField] private int score = 0;
     [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private int numOfMonstersPerRound = 6;
+    [SerializeField] private int numOfMonstersPerRoundToRemove = 6;
+
+    private float zValue = 0f;
 
     private int initialMonsterCount = 10;
     
@@ -44,7 +48,7 @@ public class MonsterManager : MonoBehaviour
         for (int i = 0; i < numOfMonsters; i++)
         {
             GameObject monsterSprite = Instantiate(monsterSpritePrefab, transform);
-            monsterSprite.transform.position = new Vector3(0f, 0f, nextMonsterID);
+            monsterSprite.transform.position = new Vector3(0f, 0f, zValue);
             
             monsterSprite.GetComponent<SpriteRenderer>().sprite = monsterSpritePool[nextMonsterID];
             
@@ -63,6 +67,7 @@ public class MonsterManager : MonoBehaviour
             monsterSprite.GetComponent<D2dDestructibleSprite>().HealSnapshot = monsterSprite.GetComponent<D2dSnapshot>();
 
             monsterGameObjects.Add(monsterSprite);
+            zValue++;
             
             if (nextMonsterID < monsterSpritePool.Length - 1)
             {
@@ -169,10 +174,10 @@ public class MonsterManager : MonoBehaviour
             {
                 nextMonster.GetComponent<D2dDestructibleSprite>().Indestructible = false;
                 FindObjectOfType<CurrencyManager>().MoneyReward(baseCoinsPerMonster * round); //TODO 1 * Round
-                if (defeatedMonsters > 0 && defeatedMonsters % 10 == 0)
+                if (defeatedMonsters > 0 && defeatedMonsters % numOfMonstersPerRound == 0)
                 {
                     round++;
-                    for (int i = 0; i < 2; i++)
+                    for (int i = 0; i < numOfMonstersPerRoundToRemove; i++)
                     {
                         // Debug.Log($"Destroying {monsterGameObjects[0].name}");
                         Destroy(monsterGameObjects[0]);
