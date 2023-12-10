@@ -1,0 +1,1244 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a6b9796d1c0440eba061ace5e9dff6, type: 3}
+  m_Name: Fluffy cloud animal transparent background
+  m_EditorClassIdentifier: 
+  assetsData:
+  - rid: 1288815891308609551
+  - rid: 1288815891308609558
+  - rid: 1288815891308609565
+  - rid: 1288815891308609572
+  - rid: 1288815891308609579
+  - rid: 1288815891308609586
+  - rid: 1288815891308609593
+  - rid: 1288815891308609600
+  - rid: 1288815891308609607
+  - rid: 1288815891308609614
+  - rid: 1288815891308609621
+  - rid: 1288815891308609628
+  currentMode: TextToSprite
+  m_Data:
+  - rid: 1288815891308609538
+  - rid: 1288815891308609539
+  - rid: 1288815891308609540
+  - rid: 1288815891308609541
+  - rid: 1288815891308609542
+  - rid: 1288815891308609543
+  - rid: 1288815891308609550
+  preRefinedArtifact:
+    rid: -2
+  refinedArtifact:
+    rid: -2
+  selectedArtifact:
+    rid: -2
+  m_Operators:
+  - rid: 1288815891308609544
+  - rid: 1288815891308609545
+  - rid: 1288815891308609546
+  - rid: 1288815891308609547
+  - rid: 1288815891308609548
+  - rid: 1288815891308609549
+  m_PreRefineOperators: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1288815891308609538
+      type: {class: FeedbackManager, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_Liked:
+          m_Values: []
+        m_Disliked:
+          m_Values: []
+    - rid: 1288815891308609539
+      type: {class: DefaultStyleData, ns: Unity.Muse.Sprite.Data, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609540
+      type: {class: GenerateButtonData, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data: 
+    - rid: 1288815891308609541
+      type: {class: MainUI/UISize, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_NodeListWidth: 300
+        m_NodeListRefineWidth: 300
+        m_AssetListRefineWidth: 200
+    - rid: 1288815891308609542
+      type: {class: SessionData, ns: Unity.Muse.Sprite.Data, asm: Unity.Muse.Sprite}
+      data:
+        m_SessionId: 2fe7a638-63da-4559-8a33-c5cdad08be77
+        sessionLoaded: 
+    - rid: 1288815891308609543
+      type: {class: BookmarkManager, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_BookmarkedArtifacts:
+          m_Values: []
+        m_IsFilterEnabled: 0
+    - rid: 1288815891308609544
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 8
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609545
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud monster transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609546
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 45906
+          - 0
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 0
+          - 
+          - 
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609547
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609548
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609549
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609550
+      type: {class: GenerateCountData, ns: Unity.Muse.Sprite.Data, asm: Unity.Muse.Sprite}
+      data:
+        m_Counter: 0
+    - rid: 1288815891308609551
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: 22923131-98d2-498e-b61a-f90e25675dc5
+        Seed: 5225
+        m_Operators:
+        - rid: 1288815891308609552
+        - rid: 1288815891308609553
+        - rid: 1288815891308609554
+        - rid: 1288815891308609555
+        - rid: 1288815891308609556
+        - rid: 1288815891308609557
+        history:
+        - rid: 1288815891308609551
+        m_UnsafeContent: 1
+    - rid: 1288815891308609552
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609553
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud animal transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609554
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 5225
+          - 22923131-98d2-498e-b61a-f90e25675dc5
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609555
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609556
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609557
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609558
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: 0ba554b7-6be7-4c39-986e-0513afd59a2f
+        Seed: 41205
+        m_Operators:
+        - rid: 1288815891308609559
+        - rid: 1288815891308609560
+        - rid: 1288815891308609561
+        - rid: 1288815891308609562
+        - rid: 1288815891308609563
+        - rid: 1288815891308609564
+        history:
+        - rid: 1288815891308609558
+        m_UnsafeContent: 0
+    - rid: 1288815891308609559
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609560
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud animal transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609561
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 41205
+          - 0ba554b7-6be7-4c39-986e-0513afd59a2f
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609562
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609563
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609564
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609565
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: 5956857f-47ee-47f5-aa22-6c093ee32ea2
+        Seed: 51920
+        m_Operators:
+        - rid: 1288815891308609566
+        - rid: 1288815891308609567
+        - rid: 1288815891308609568
+        - rid: 1288815891308609569
+        - rid: 1288815891308609570
+        - rid: 1288815891308609571
+        history:
+        - rid: 1288815891308609565
+        m_UnsafeContent: 0
+    - rid: 1288815891308609566
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609567
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud animal transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609568
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 51920
+          - 5956857f-47ee-47f5-aa22-6c093ee32ea2
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609569
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609570
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609571
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609572
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: 3bf9d16c-124b-4372-8ea5-635691665804
+        Seed: 28691
+        m_Operators:
+        - rid: 1288815891308609573
+        - rid: 1288815891308609574
+        - rid: 1288815891308609575
+        - rid: 1288815891308609576
+        - rid: 1288815891308609577
+        - rid: 1288815891308609578
+        history:
+        - rid: 1288815891308609572
+        m_UnsafeContent: 1
+    - rid: 1288815891308609573
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609574
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud animal transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609575
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 28691
+          - 3bf9d16c-124b-4372-8ea5-635691665804
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609576
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609577
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609578
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609579
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: 777626e5-1f6d-4a16-b019-c724ffe4d1c6
+        Seed: 51030
+        m_Operators:
+        - rid: 1288815891308609580
+        - rid: 1288815891308609581
+        - rid: 1288815891308609582
+        - rid: 1288815891308609583
+        - rid: 1288815891308609584
+        - rid: 1288815891308609585
+        history:
+        - rid: 1288815891308609579
+        m_UnsafeContent: 0
+    - rid: 1288815891308609580
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 8
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609581
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud monster transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609582
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 51030
+          - 777626e5-1f6d-4a16-b019-c724ffe4d1c6
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609583
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609584
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609585
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609586
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: 777f49c1-ec69-49d3-baa5-6af942a174d1
+        Seed: 16986
+        m_Operators:
+        - rid: 1288815891308609587
+        - rid: 1288815891308609588
+        - rid: 1288815891308609589
+        - rid: 1288815891308609590
+        - rid: 1288815891308609591
+        - rid: 1288815891308609592
+        history:
+        - rid: 1288815891308609586
+        m_UnsafeContent: 1
+    - rid: 1288815891308609587
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 8
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609588
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud monster transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609589
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 16986
+          - 777f49c1-ec69-49d3-baa5-6af942a174d1
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609590
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609591
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609592
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609593
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: c74b3277-b3b5-4b02-9133-74c68c9580d1
+        Seed: 57197
+        m_Operators:
+        - rid: 1288815891308609594
+        - rid: 1288815891308609595
+        - rid: 1288815891308609596
+        - rid: 1288815891308609597
+        - rid: 1288815891308609598
+        - rid: 1288815891308609599
+        history:
+        - rid: 1288815891308609593
+        m_UnsafeContent: 0
+    - rid: 1288815891308609594
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 8
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609595
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud monster transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609596
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 57197
+          - c74b3277-b3b5-4b02-9133-74c68c9580d1
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609597
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609598
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609599
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609600
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: 06d8ecb4-e968-4298-972a-1f9eec2f3632
+        Seed: 40952
+        m_Operators:
+        - rid: 1288815891308609601
+        - rid: 1288815891308609602
+        - rid: 1288815891308609603
+        - rid: 1288815891308609604
+        - rid: 1288815891308609605
+        - rid: 1288815891308609606
+        history:
+        - rid: 1288815891308609600
+        m_UnsafeContent: 0
+    - rid: 1288815891308609601
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 8
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609602
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud monster transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609603
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 40952
+          - 06d8ecb4-e968-4298-972a-1f9eec2f3632
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609604
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609605
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609606
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609607
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: d2a6ef0f-2325-433b-8339-5a688091f674
+        Seed: 16949
+        m_Operators:
+        - rid: 1288815891308609608
+        - rid: 1288815891308609609
+        - rid: 1288815891308609610
+        - rid: 1288815891308609611
+        - rid: 1288815891308609612
+        - rid: 1288815891308609613
+        history:
+        - rid: 1288815891308609607
+        m_UnsafeContent: 1
+    - rid: 1288815891308609608
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 8
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609609
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud monster transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609610
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 16949
+          - d2a6ef0f-2325-433b-8339-5a688091f674
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609611
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609612
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609613
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609614
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: 3ca4653c-5cc8-45e2-b0d7-0dc3482a1e85
+        Seed: 44926
+        m_Operators:
+        - rid: 1288815891308609615
+        - rid: 1288815891308609616
+        - rid: 1288815891308609617
+        - rid: 1288815891308609618
+        - rid: 1288815891308609619
+        - rid: 1288815891308609620
+        history:
+        - rid: 1288815891308609614
+        m_UnsafeContent: 0
+    - rid: 1288815891308609615
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 8
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609616
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud monster transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609617
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 44926
+          - 3ca4653c-5cc8-45e2-b0d7-0dc3482a1e85
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609618
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609619
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609620
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609621
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: 0c92a16c-0754-468e-9021-d4cc03fd8d95
+        Seed: 20188
+        m_Operators:
+        - rid: 1288815891308609622
+        - rid: 1288815891308609623
+        - rid: 1288815891308609624
+        - rid: 1288815891308609625
+        - rid: 1288815891308609626
+        - rid: 1288815891308609627
+        history:
+        - rid: 1288815891308609621
+        m_UnsafeContent: 0
+    - rid: 1288815891308609622
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 8
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609623
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud monster transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609624
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 20188
+          - 0c92a16c-0754-468e-9021-d4cc03fd8d95
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609625
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609626
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609627
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609628
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        Guid: 2a91a13c-00c4-45bd-9e14-8487eef9f28b
+        Seed: 58551
+        m_Operators:
+        - rid: 1288815891308609629
+        - rid: 1288815891308609630
+        - rid: 1288815891308609631
+        - rid: 1288815891308609632
+        - rid: 1288815891308609633
+        - rid: 1288815891308609634
+        history:
+        - rid: 1288815891308609628
+        m_UnsafeContent: 0
+    - rid: 1288815891308609629
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToSprite
+          - 8
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609630
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - Fluffy cloud monster transparent background
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 1288815891308609631
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 58551
+          - 2a91a13c-00c4-45bd-9e14-8487eef9f28b
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - Happy Harvest [Orion V4 2000]
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609632
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+    - rid: 1288815891308609633
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 1288815891308609634
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - 2fe7a638-63da-4559-8a33-c5cdad08be77
+          enabled: 0
+          assembly: Unity.Muse.Sprite

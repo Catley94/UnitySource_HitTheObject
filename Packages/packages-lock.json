@@ -271,11 +271,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.muse.texture": {
-      "version": "0.4.1",
+      "version": "1.0.0-pre.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.muse.common": "0.4.1",
+        "com.unity.muse.common": "1.0.0-pre.2",
         "com.unity.shadergraph": "14.0.7"
       },
       "url": "https://packages.unity.com"

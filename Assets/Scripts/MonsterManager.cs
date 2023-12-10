@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Destructible2D;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -15,6 +16,8 @@ public class MonsterManager : MonoBehaviour
     [SerializeField] private int round = 1;
     [SerializeField] private int nextMonsterID = 0;
     [SerializeField] private int baseCoinsPerMonster = 1;
+    [SerializeField] private int score = 0;
+    [SerializeField] private TMP_Text scoreText;
 
     private int initialMonsterCount = 10;
     
@@ -42,7 +45,11 @@ public class MonsterManager : MonoBehaviour
         {
             GameObject monsterSprite = Instantiate(monsterSpritePrefab, transform);
             monsterSprite.transform.position = new Vector3(0f, 0f, nextMonsterID);
+            
             monsterSprite.GetComponent<SpriteRenderer>().sprite = monsterSpritePool[nextMonsterID];
+            
+            ResizePrefabFromSprite(monsterSprite);
+
             monsterSprite.GetComponent<D2dDestructibleSprite>().Shape = monsterSpritePool[nextMonsterID];
             monsterSprite.GetComponent<D2dDestructibleSprite>().Rebuild();
             monsterSprite.name = monsterSpritePool[nextMonsterID].name + " " + nextMonsterID;
@@ -68,7 +75,18 @@ public class MonsterManager : MonoBehaviour
         }
         SetupMonsters();
     }
-    
+
+    private static void ResizePrefabFromSprite(GameObject monsterSprite)
+    {
+        float spriteWidth = monsterSprite.GetComponent<SpriteRenderer>().sprite.bounds.size.x;
+        Camera mainCamera = Camera.main;
+        float cameraHeight = 2f * mainCamera.orthographicSize;
+        float cameraWidth = cameraHeight * mainCamera.aspect;
+        float widthScale = cameraWidth / spriteWidth;
+        // Set the scale
+        monsterSprite.transform.localScale = new Vector3(widthScale, widthScale, 1);
+    }
+
     private void SetupMonsters()
     {
         for (int i = 0; i < monsterGameObjects.Count; i++)
@@ -137,6 +155,12 @@ public class MonsterManager : MonoBehaviour
         SetupDestructibleListener(nextMonster, destructibleRequirements);
     }
 
+    private void IncreaseScore()
+    {
+        score++;
+        scoreText.text = "Score: " + score;
+    }
+
     private void SetupDestructibleListener(GameObject nextMonster, D2dRequirements destructibleRequirements)
     {
         destructibleRequirements.OnRequirementsMet.AddListener(() =>
@@ -157,6 +181,7 @@ public class MonsterManager : MonoBehaviour
                 }
                 //Add new monster to list and Instantiate monster
                 defeatedMonsters++;
+                IncreaseScore();
             }
             InstantiateMonsters(1);
         });
