@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using AssetKits.ParticleImage;
 using TMPro;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
@@ -11,6 +12,8 @@ public class CurrencyManager : MonoBehaviour
     private int _balance = 20;
     [SerializeField] private TMP_Text _balanceText;
     private string _prefix = "Balance: ";
+    
+    [SerializeField] private ParticleImage _particleImage;
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +46,8 @@ public class CurrencyManager : MonoBehaviour
     public void MoneyReward(int amount)
     {
         IncreaseMoney(amount);
+        _particleImage.Play();
+        _particleImage.onLastParticleFinished.AddListener(() => _particleImage.Stop());
     }
 
     #endregion
