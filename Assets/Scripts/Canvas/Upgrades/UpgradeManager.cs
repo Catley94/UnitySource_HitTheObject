@@ -13,16 +13,30 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] private TMP_Text tapSizeText;
     [SerializeField] private int increaseCostBy = 1;
     [SerializeField] private TMP_Text costText;
+    [SerializeField] private int selectedIndex = 0;
+    [SerializeField] private GameObject lessThanButton;
+    [SerializeField] private GameObject moreThanButton;
     
     // Start is called before the first frame update
     void Start()
     {
+
+        foreach (Transform button in transform)
+        {
+            button.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                PurchaseUpgrade(transform.GetChild(selectedIndex).GetComponent<UpgradeStats>().GetCost());
+            });
+        }
+        
         transform.GetChild(0).GetComponent<Button>().onClick.AddListener(() =>
         {
-            PurchaseUpgrade(transform.GetChild(0).GetComponent<UpgradeStats>().GetCost());
+            PurchaseUpgrade(transform.GetChild(selectedIndex).GetComponent<UpgradeStats>().GetCost());
         });
         
         tapSizeText.text = "Tap Size: " + tapSize;
+        
+        SetButtonsEnabledState(selectedIndex);
     }
 
     // Update is called once per frame
@@ -42,22 +56,143 @@ public class UpgradeManager : MonoBehaviour
                 child.GetComponent<Button>().interactable = false;
             }
         }
+        
+        if(selectedIndex == 0)
+        {
+            lessThanButton.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            lessThanButton.GetComponent<Button>().interactable = true;
+        }
+        
+        if(selectedIndex == transform.childCount - 1)
+        {
+            moreThanButton.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            moreThanButton.GetComponent<Button>().interactable = true;
+        }
+    }
+    
+    public void IncreaseSelectedIndex()
+    {
+        if (selectedIndex < transform.childCount - 1)
+        {
+            selectedIndex++;
+        }
+        else
+        {
+            selectedIndex = 0;
+        }
+
+        SetButtonsEnabledState(selectedIndex);
+    }
+
+    private void SetButtonsEnabledState(int _selectedIndex)
+    {
+        switch (_selectedIndex)
+        {
+            case 0:
+                foreach (Transform button in transform)
+                {
+                    if (transform.GetChild(0).GetComponent<Button>() != button.GetComponent<Button>())
+                    {
+                        button.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        button.gameObject.SetActive(true);
+                        SetCostText(button.GetComponent<UpgradeStats>().GetCost());
+                    }
+                }
+
+                break;
+            case 1:
+                foreach (Transform button in transform)
+                {
+                    if (transform.GetChild(1).GetComponent<Button>() != button.GetComponent<Button>())
+                    {
+                        button.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        button.gameObject.SetActive(true);
+                        SetCostText(button.GetComponent<UpgradeStats>().GetCost());
+                    }
+                    
+                }
+
+                break;
+            case 2:
+                foreach (Transform button in transform)
+                {
+                    if (transform.GetChild(2).GetComponent<Button>() != button.GetComponent<Button>())
+                    {
+                        button.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        button.gameObject.SetActive(true);
+                        SetCostText(button.GetComponent<UpgradeStats>().GetCost());
+                    }
+                }
+
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void DecreaseSelectedIndex()
+    {
+        if (selectedIndex > 0)
+        {
+            selectedIndex--;
+        }
+        else
+        {
+            selectedIndex = transform.childCount - 1;
+        }
+        
+        SetButtonsEnabledState(selectedIndex);
     }
 
     public void PurchaseUpgrade(int cost)
     {
         D2dTapToStamp tapToStamp = FindObjectOfType<D2dTapToStamp>();
-        UpgradeStats firstChildUpgradeStats = transform.GetChild(0).GetComponent<UpgradeStats>();
+        UpgradeStats childUpgradeStats = transform.GetChild(selectedIndex).GetComponent<UpgradeStats>();
         FindObjectOfType<CurrencyManager>().Purchase(cost);
-        tapToStamp.Size = new Vector2(
-            tapToStamp.Size.x + firstChildUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy(), 
-            tapToStamp.Size.y + firstChildUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy());
-        IncreaseTapSize(firstChildUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy());
 
-        int newCost = firstChildUpgradeStats.GetComponent<UpgradeStats>().GetCost() +
+        switch (selectedIndex)
+        {
+            case 0:
+                tapToStamp.Size = new Vector2(
+                    tapToStamp.Size.x + childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy(), 
+                    tapToStamp.Size.y + childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy());
+                IncreaseTapSize(childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy());
+                break;
+            case 1:
+                Debug.Log("Purchased 1");
+                break;
+            case 2:
+                Debug.Log("Purchased 2");
+                break;
+            default:
+                break;
+            
+        }
+
+        int newCost = childUpgradeStats.GetComponent<UpgradeStats>().GetCost() +
                       increaseCostBy *
                       FindObjectOfType<MonsterManager>().GetRound();
-        firstChildUpgradeStats.GetComponent<UpgradeStats>().SetCost(newCost);
+        childUpgradeStats.GetComponent<UpgradeStats>().SetCost(newCost);
+        SetCostText(newCost);
+    }
+
+    private void SetCostText(int newCost)
+    {
         costText.text = "Cost: " + newCost;
     }
 

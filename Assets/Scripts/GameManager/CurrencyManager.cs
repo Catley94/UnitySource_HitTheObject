@@ -9,7 +9,7 @@ using UnityEngine.Serialization;
 public class CurrencyManager : MonoBehaviour
 {
     
-    private int _balance = 20;
+    [SerializeField] private int _balance = 20;
     [SerializeField] private TMP_Text _balanceText;
     private string _prefix = "Balance: ";
     
