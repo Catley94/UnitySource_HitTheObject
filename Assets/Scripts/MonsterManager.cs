@@ -38,6 +38,11 @@ public class MonsterManager : MonoBehaviour
         
     }
 
+    public int GetRound()
+    {
+        return round;
+    }
+
     private void BuildAllMonsters()
     {
         InstantiateMonsters(3);

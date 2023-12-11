@@ -2,13 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Destructible2D.Examples;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UpgradeManager : MonoBehaviour
 {
-    
-    
+
+    [SerializeField] private float tapSize;
+    [SerializeField] private TMP_Text tapSizeText;
+    [SerializeField] private int increaseCostBy = 1;
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +20,8 @@ public class UpgradeManager : MonoBehaviour
         {
             PurchaseUpgrade(transform.GetChild(0).GetComponent<UpgradeStats>().GetCost());
         });
+        
+        tapSizeText.text = "Tap Size: " + tapSize;
     }
 
     // Update is called once per frame
@@ -46,6 +51,18 @@ public class UpgradeManager : MonoBehaviour
         tapToStamp.Size = new Vector2(
             tapToStamp.Size.x + firstChildUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy(), 
             tapToStamp.Size.y + firstChildUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy());
+        IncreaseTapSize(firstChildUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy());
+
+        firstChildUpgradeStats.GetComponent<UpgradeStats>().SetCost(
+            firstChildUpgradeStats.GetComponent<UpgradeStats>().GetCost() + 
+            increaseCostBy * 
+            FindObjectOfType<MonsterManager>().GetRound());
     }
-    
+
+    private void IncreaseTapSize(float _upgradeSizeBy)
+    {
+        tapSize += _upgradeSizeBy;
+        tapSizeText.text = "Tap Size: " + tapSize;
+    }
+
 }
