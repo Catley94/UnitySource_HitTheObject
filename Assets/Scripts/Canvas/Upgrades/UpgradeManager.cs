@@ -12,6 +12,7 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] private float tapSize;
     [SerializeField] private TMP_Text tapSizeText;
     [SerializeField] private int increaseCostBy = 1;
+    [SerializeField] private TMP_Text costText;
     
     // Start is called before the first frame update
     void Start()
@@ -53,10 +54,11 @@ public class UpgradeManager : MonoBehaviour
             tapToStamp.Size.y + firstChildUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy());
         IncreaseTapSize(firstChildUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy());
 
-        firstChildUpgradeStats.GetComponent<UpgradeStats>().SetCost(
-            firstChildUpgradeStats.GetComponent<UpgradeStats>().GetCost() + 
-            increaseCostBy * 
-            FindObjectOfType<MonsterManager>().GetRound());
+        int newCost = firstChildUpgradeStats.GetComponent<UpgradeStats>().GetCost() +
+                      increaseCostBy *
+                      FindObjectOfType<MonsterManager>().GetRound();
+        firstChildUpgradeStats.GetComponent<UpgradeStats>().SetCost(newCost);
+        costText.text = "Cost: " + newCost;
     }
 
     private void IncreaseTapSize(float _upgradeSizeBy)
