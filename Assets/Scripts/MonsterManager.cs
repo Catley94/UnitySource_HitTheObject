@@ -35,7 +35,20 @@ public class MonsterManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        bool atleastOneIsDestructable = false;
+        foreach (Transform monster in transform)
+        {
+            if (!monster.GetComponent<D2dDestructible>().Indestructible)
+            {
+                atleastOneIsDestructable = true;
+            }
+        }
+
+        if (!atleastOneIsDestructable)
+        {
+            Debug.LogWarning("No destructable objects found, setting first object to destructable");
+            transform.GetChild(0).GetComponent<D2dDestructible>().Indestructible = false;
+        }
     }
 
     public int GetRound()
