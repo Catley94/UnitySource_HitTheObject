@@ -16,6 +16,8 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] private int selectedIndex = 0;
     [SerializeField] private GameObject lessThanButton;
     [SerializeField] private GameObject moreThanButton;
+
+    private bool dragToStampEnabled = false;
     
     // Start is called before the first frame update
     void Start()
@@ -126,19 +128,25 @@ public class UpgradeManager : MonoBehaviour
 
                 break;
             case 2:
-                foreach (Transform button in transform)
+                if (dragToStampEnabled)
                 {
-                    if (transform.GetChild(2).GetComponent<Button>() != button.GetComponent<Button>())
+                    foreach (Transform button in transform)
                     {
-                        button.gameObject.SetActive(false);
-                    }
-                    else
-                    {
-                        button.gameObject.SetActive(true);
-                        SetCostText(button.GetComponent<UpgradeStats>().GetCost());
+                        if (transform.GetChild(2).GetComponent<Button>() != button.GetComponent<Button>())
+                        {
+                            button.gameObject.SetActive(false);
+                        }
+                        else
+                        {
+                            button.gameObject.SetActive(true);
+                            SetCostText(button.GetComponent<UpgradeStats>().GetCost());
+                        }
                     }
                 }
-
+                else
+                {
+                    DecreaseSelectedIndex();
+                }
                 break;
             default:
                 break;
@@ -174,10 +182,17 @@ public class UpgradeManager : MonoBehaviour
                 IncreaseTapSize(childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy());
                 break;
             case 1:
-                Debug.Log("Purchased 1");
+                Debug.Log("Scratch Effect");
+                GameObject tapToStampGO = FindObjectOfType<D2dTapToStamp>().gameObject;
+                tapToStampGO.GetComponent<D2dDragToStamp>().enabled = true;
+                dragToStampEnabled = true;
                 break;
             case 2:
-                Debug.Log("Purchased 2");
+                Debug.Log("Increase Scratch Effect size");
+                FindObjectOfType<D2dDragToStamp>().Thickness +=
+                    childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy();
+                FindObjectOfType<D2dDragToStamp>().Extend +=
+                    childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy();
                 break;
             default:
                 break;

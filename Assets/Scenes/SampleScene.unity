@@ -665,9 +665,9 @@ RectTransform:
   - {fileID: 1041940080}
   m_Father: {fileID: 2024886336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 270, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &442303177
@@ -2020,9 +2020,9 @@ RectTransform:
   - {fileID: 857136553}
   m_Father: {fileID: 2024886336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 810, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853132906
@@ -2263,6 +2263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 894378404}
   - component: {fileID: 894378403}
+  - component: {fileID: 894378405}
   m_Layer: 0
   m_Name: Tap2Stamp
   m_TagString: Untagged
@@ -2323,6 +2324,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &894378405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894378402}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072c7de441bb7bc44bc9febe5f2f90a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Controls:
+    UseFinger: 1
+    UseMouse: 1
+    UseKey: 0
+  Intercept: 0
+  Layers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  Exclude: {fileID: 0}
+  Paint: 0
+  StampShape:
+    Color: {fileID: 2800000, guid: 77cee360853680f4d8a0bd8800eb022d, type: 3}
+    Alpha: {fileID: 2800000, guid: fef0ca7c77c683d4da0b22b25f9ed8ad, type: 3}
+  ColorShape: {fileID: 0}
+  AlphaShape: {fileID: 0}
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  Thickness: 1
+  Extend: 1
 --- !u!1 &904562882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2904,7 +2935,7 @@ GameObject:
   - component: {fileID: 1196011716}
   - component: {fileID: 1196011715}
   m_Layer: 5
-  m_Name: Increase Auto Tap Size
+  m_Name: Increase Scratch Effect Size
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2943,7 +2974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 1000
-  upgradeSizeBy: 5000
+  upgradeSizeBy: 0.1
 --- !u!114 &1196011716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3208,7 +3239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buy Auto Tapper
+  m_text: Buy Scratch Effect
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a65ec46acc447a541af906fd03a345ed, type: 2}
   m_sharedMaterial: {fileID: -2883778811093058655, guid: a65ec46acc447a541af906fd03a345ed, type: 2}
@@ -5232,7 +5263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52e93cd30f19e748a9d6fe68206889c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _balance: 20
+  _balance: 5000
   _balanceText: {fileID: 1170261724}
   _particleImage: {fileID: 1502814099}
 --- !u!4 &1712138436
@@ -5976,7 +6007,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase Auto Tap Size
+  m_text: Increase Scratch Effect Size
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a65ec46acc447a541af906fd03a345ed, type: 2}
   m_sharedMaterial: {fileID: -2883778811093058655, guid: a65ec46acc447a541af906fd03a345ed, type: 2}
@@ -6517,7 +6548,7 @@ GameObject:
   - component: {fileID: 2007455685}
   - component: {fileID: 2007455684}
   m_Layer: 5
-  m_Name: Buy Auto Tapper
+  m_Name: Buy Scratch Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6555,8 +6586,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd0792b579f5424dbbcee832cc73fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 200
-  upgradeSizeBy: 10000
+  cost: 1000
+  upgradeSizeBy: 0
 --- !u!114 &2007455685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6667,7 +6698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2024886336
 RectTransform:
   m_ObjectHideFlags: 0
