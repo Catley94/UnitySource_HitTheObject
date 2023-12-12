@@ -12,7 +12,8 @@ public class UpgradeManager : MonoBehaviour
 
     [SerializeField] private float tapSize;
     [SerializeField] private TMP_Text tapSizeText;
-    [SerializeField] private int increaseCostBy = 1;
+    [FormerlySerializedAs("increaseCostBy")] [SerializeField] private int increaseTapUpgradeCostBy = 1;
+    [SerializeField] private int increaseScratchUpgradeCostBy = 2000;
     [SerializeField] private TMP_Text costText;
     [SerializeField] private int selectedIndex = 0;
     [SerializeField] private GameObject lessThanButton;
@@ -55,7 +56,14 @@ public class UpgradeManager : MonoBehaviour
             UpgradeStats upgradeStats = child.GetComponent<UpgradeStats>();
             if (FindObjectOfType<CurrencyManager>().CanPurchase(upgradeStats.GetCost()))
             {
-                child.GetComponent<Button>().interactable = true;
+                if(i == 1 && dragToStampEnabled)
+                {
+                    child.GetComponent<Button>().interactable = false;
+                }
+                else
+                {
+                    child.GetComponent<Button>().interactable = true;
+                }
             }
             else
             {
@@ -189,6 +197,11 @@ public class UpgradeManager : MonoBehaviour
                     tapToStamp.Size.x + childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy(), 
                     tapToStamp.Size.y + childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy());
                 IncreaseTapSize(childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy());
+                int newTapCost = childUpgradeStats.GetComponent<UpgradeStats>().GetCost() +
+                              increaseTapUpgradeCostBy *
+                              FindObjectOfType<MonsterManager>().GetRound();
+                childUpgradeStats.GetComponent<UpgradeStats>().SetCost(newTapCost);
+                SetCostText(newTapCost);
                 break;
             case 1:
                 Debug.Log("Scratch Effect");
@@ -204,17 +217,20 @@ public class UpgradeManager : MonoBehaviour
                 FindObjectOfType<D2dDragToStamp>().Extend +=
                     childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy();
                 scratchSizeUI.GetComponentInChildren<TMP_Text>().text = "Scratch Size: " + FindObjectOfType<D2dDragToStamp>().Thickness.ToString("F1");
+                int newScratchCost = childUpgradeStats.GetComponent<UpgradeStats>().GetCost() +
+                              increaseScratchUpgradeCostBy *
+                              FindObjectOfType<MonsterManager>().GetRound();
+                childUpgradeStats.GetComponent<UpgradeStats>().SetCost(newScratchCost);
+                SetCostText(newScratchCost);
                 break;
             default:
                 break;
             
         }
 
-        int newCost = childUpgradeStats.GetComponent<UpgradeStats>().GetCost() +
-                      increaseCostBy *
-                      FindObjectOfType<MonsterManager>().GetRound();
-        childUpgradeStats.GetComponent<UpgradeStats>().SetCost(newCost);
-        SetCostText(newCost);
+        
+        
+        
     }
 
     private void SetCostText(int newCost)

@@ -462,7 +462,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tapSize: 0
   tapSizeText: {fileID: 0}
-  increaseCostBy: 1
+  increaseTapUpgradeCostBy: 1
+  increaseScratchUpgradeCostBy: 2000
   costText: {fileID: 0}
   selectedIndex: 0
   lessThanButton: {fileID: 0}
@@ -1133,7 +1134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tapSize: 1
   tapSizeText: {fileID: 1425432593}
-  increaseCostBy: 1
+  increaseTapUpgradeCostBy: 1
+  increaseScratchUpgradeCostBy: 2000
   costText: {fileID: 91751265}
   selectedIndex: 0
   lessThanButton: {fileID: 442303175}
@@ -5538,7 +5540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52e93cd30f19e748a9d6fe68206889c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _balance: 5000
+  _balance: 20000
   _balanceText: {fileID: 1170261724}
   _particleImage: {fileID: 1502814099}
 --- !u!4 &1712138436
