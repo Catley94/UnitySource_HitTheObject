@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Destructible2D.Examples;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UpgradeManager : MonoBehaviour
@@ -16,8 +17,11 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] private int selectedIndex = 0;
     [SerializeField] private GameObject lessThanButton;
     [SerializeField] private GameObject moreThanButton;
+    [SerializeField] private GameObject scratchSizeUI;
 
     private bool dragToStampEnabled = false;
+    private Color originalButtonColour;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -138,6 +142,8 @@ public class UpgradeManager : MonoBehaviour
                         }
                         else
                         {
+                            // ColorBlock colours = moreThanButton.GetComponent<Button>().colors;
+                            // colours.normalColor = originalButtonColour;
                             button.gameObject.SetActive(true);
                             SetCostText(button.GetComponent<UpgradeStats>().GetCost());
                         }
@@ -146,6 +152,9 @@ public class UpgradeManager : MonoBehaviour
                 else
                 {
                     DecreaseSelectedIndex();
+                    // originalButtonColour = moreThanButton.GetComponent<Button>().colors.normalColor;
+                    // ColorBlock colours = moreThanButton.GetComponent<Button>().colors;
+                    // colours.normalColor = colours.disabledColor;
                 }
                 break;
             default:
@@ -186,6 +195,7 @@ public class UpgradeManager : MonoBehaviour
                 GameObject tapToStampGO = FindObjectOfType<D2dTapToStamp>().gameObject;
                 tapToStampGO.GetComponent<D2dDragToStamp>().enabled = true;
                 dragToStampEnabled = true;
+                scratchSizeUI.SetActive(true);
                 break;
             case 2:
                 Debug.Log("Increase Scratch Effect size");
@@ -193,6 +203,7 @@ public class UpgradeManager : MonoBehaviour
                     childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy();
                 FindObjectOfType<D2dDragToStamp>().Extend +=
                     childUpgradeStats.GetComponent<UpgradeStats>().GetUpgradeSizeBy();
+                scratchSizeUI.GetComponentInChildren<TMP_Text>().text = "Scratch Size: " + FindObjectOfType<D2dDragToStamp>().Thickness.ToString("F1");
                 break;
             default:
                 break;
@@ -214,7 +225,7 @@ public class UpgradeManager : MonoBehaviour
     private void IncreaseTapSize(float _upgradeSizeBy)
     {
         tapSize += _upgradeSizeBy;
-        tapSizeText.text = "Tap Size: " + tapSize;
+        tapSizeText.text = "Tap Size: " + tapSize.ToString("F1");
     }
 
 }
